@@ -41,10 +41,10 @@ jobs:
       run: chmod +x gradlew
 
     - name: Build APK (Release)
-      run: ./gradlew :TMessagesProj:assembleRelease
+      run: ./gradlew :TMessagesProj:assembleAfatRelease
 
     - name: Upload generated APK
       uses: actions/upload-artifact@v4
       with:
         name: Oiygram-Release
-        path: TMessagesProj/build/outputs/apk/release/*.apk
+        path: TMessagesProj/build/outputs/apk/afat/release/*.apk
