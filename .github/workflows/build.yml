@@ -19,9 +19,8 @@ jobs:
 
     - name: Install Android SDK manually
       run: |
-        echo "SDK_URL=https://dl.google.com/android/repository/commandlinetools-linux-11076708_latest.zip" >> $GITHUB_ENV
         mkdir -p $HOME/android/sdk/cmdline-tools/latest
-        wget -q $SDK_URL -O sdk.zip
+        wget -q https://dl.google.com/android/repository/commandlinetools-linux-11076708_latest.zip -O sdk.zip
         unzip -q sdk.zip -d $HOME/android/sdk/cmdline-tools/
         mv $HOME/android/sdk/cmdline-tools/cmdline-tools/* $HOME/android/sdk/cmdline-tools/latest/
         rm -rf $HOME/android/sdk/cmdline-tools/cmdline-tools/ sdk.zip
